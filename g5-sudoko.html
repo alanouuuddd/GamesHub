@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="styles-games.css">
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://mczak.com/code/sudoku/js/sudoku2.js"></script>
+</head>
+<body>
+    <h1>Sudoku</h1>
+    <div class="wrap">
+        <label for="toggleCandidates">Show candidates </label>
+        <input id="toggleCandidates" class="js-candidate-toggle" type="checkbox"/>
+
+        <p>New:</p>
+        <button type="button" class="sudokubutton1 js-generate-board-btn--easy">Easy</button>
+        <button type="button" class="sudokubutton2 js-generate-board-btn--medium">Medium</button>
+        <button type="button" class="sudokubutton3 js-generate-board-btn--hard">Hard</button>
+        <button type="button" class="sudokubutton4 js-generate-board-btn--very-hard">Very Hard</button>
+
+        <div id="sudoku" class="sudoku-board"></div>
+
+        <p>Solve:</p>
+        <button type="button" class="sudokubutton5 js-solve-step-btn">One Step</button>
+        <button type="button" class="sudokubutton6 js-solve-all-btn">All</button>
+        
+        <p>Clear:</p>
+        <button type="button" class="sudokubutton7 js-clear-board-btn">Board</button>
+    </div>
+    
+    <script src="script-sudoku.js"></script>
+</body>
+</html>

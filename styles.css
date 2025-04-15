@@ -1,0 +1,74 @@
+/*---Style created using Copilot with the command: 
+"Based on the neon aesthetic and gaming theme in the
+image you shared, I’ll integrate a gradient background
+with vibrant neon colors, along with some stylistic
+elements inspired by the neon icons and their glow."*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Retro-style font */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #1e3a8a, #9333ea, #f43f5e); /* Gradient background */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    padding: 20px;
+    border-bottom: 3px solid #ff007f;
+    text-shadow: 2px 2px #000;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #00ffff;
+    text-shadow: 4px 4px #000000;
+}
+
+nav {
+    margin: 20px auto;
+}
+
+nav a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background: #222;
+    color: #00ff7f;
+    border: 2px solid #00ff7f;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 2px 2px #000;
+}
+
+nav a:hover {
+    background: #00ff7f;
+    color: #000000;
+}
+
+.neon-box {
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ff007f;
+    box-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f;
+    width: 80%;
+    border-radius: 15px;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    font-size: 0.8rem;
+    text-shadow: 2px 2px #000;
+    border-top: 3px solid #9333ea;
+}

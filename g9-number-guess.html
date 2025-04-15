@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>🎯 Guess the Mystery Number!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff4d4d;
+            text-shadow: 2px 2px #fff;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .form {
+            margin-top: 30px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e63946;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎉 Welcome to the Mystery Number Challenge! 🎉</h1>
+    <p>
+        I've thought of a magical number between <strong>1 and 10</strong>... <br>
+        Can you guess what it is? 🔮✨
+    </p>
+
+    <div class="form">
+        <label for="guessField">Your lucky guess: </label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Take a shot! 🎯" class="guessSubmit" id="submitguess">
+    </div>
+
+    <div id="message"></div>
+
+    <script type="text/javascript">
+        // 🎲 Generate a Random Number
+        let y = Math.floor(Math.random() * 10 + 1);
+        let guess = 1;
+
+        document.getElementById("submitguess").onclick = function () {
+            let x = parseInt(document.getElementById("guessField").value);
+            const message = document.getElementById("message");
+
+            if (isNaN(x) || x < 1 || x > 10) {
+                message.textContent = "⛔ Please enter a number between 1 and 10!";
+                message.style.color = "#ff4d4d";
+                return;
+            }
+
+            if (x === y) {
+                message.textContent = `🎉 CONGRATS! You nailed it in ${guess} guess${guess > 1 ? 'es' : ''}! 🎉`;
+                message.style.color = "green";
+            } else if (x > y) {
+                guess++;
+                message.textContent = "📉 Oops! Try something smaller.";
+                message.style.color = "#ff8800";
+            } else {
+                guess++;
+                message.textContent = "📈 Nope! Try a bigger number.";
+                message.style.color = "#0077b6";
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="style-word-guess.css" />
+    <script src="script-word-guess.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <h1>Guess the word</h1>
+        <p>
+            <b>Hint:</b> <span id="hint"></span>
+        </p>
+        <p id="displayWord"></p>
+        <p>Guess one letter:
+            <input type="text" maxlength="1" id="letter-input">
+        </p>
+        <button onclick="guessLetter()">Submit</button>
+        <button onclick="resetGame()">Reset</button>
+    </div>
+</body>
+</html>
